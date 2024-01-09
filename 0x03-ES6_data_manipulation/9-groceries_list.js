@@ -4,7 +4,7 @@ const groceriesList = () => {
     Apples: 10,
     Tomatoes: 10,
     Pasta: 1,
-    Rice; 1,
+    Rice: 1,
     Banana: 5,
   };
   for (const k of Object.keys(objs)) {
