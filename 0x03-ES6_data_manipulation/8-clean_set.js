@@ -5,7 +5,7 @@ const cleanSet = (set, startString) => {
   return [...set]
     .filter((param) => (param !== undefined ? param.startsWith(startString) : ''))
     .map((param) => (param !== undefined ? param.slice(startString.length) : ''))
-    .join('-'');
+    .join('-');
 };
 
 export default cleanSet;
