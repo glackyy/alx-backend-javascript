@@ -6,4 +6,5 @@ const hasValuesFromArray = (set, arr) => {
   }
   return true;
 };
+
 export default hasValuesFromArray;
