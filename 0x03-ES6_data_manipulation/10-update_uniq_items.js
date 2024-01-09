@@ -8,6 +8,6 @@ const updateUniqueItems = (map) => {
     return map;
   }
   throw new Error('Cannot process');
-}
+};
 
 export default updateUniqueItems;
