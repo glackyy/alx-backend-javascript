@@ -31,7 +31,7 @@ function countStudents(fileName) {
             }
           }
         }
-        const l =  leng - 1;
+        const l = leng - 1;
         output += `Number of students: ${l}\n`;
         for (const [key, val] of Object.entries(fields)) {
           if (key !== 'field') {
