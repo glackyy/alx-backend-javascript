@@ -5,4 +5,9 @@ if (process.stdin.isTTY) {
     process.stdout.write(`Your name is: ${data.toString()}`);
     process.exit();
   });
+} else {
+  process.stdin.on('data', (data) => {
+    process.stdout.write(`Your name is: ${data.toString()}`);
+    process.exit();
+  });
 }
