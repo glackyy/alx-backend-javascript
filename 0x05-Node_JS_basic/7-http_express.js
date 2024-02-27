@@ -1,4 +1,3 @@
-const { error } = require('console');
 const express = require('express');
 const { readFile } = require('fs');
 
@@ -20,8 +19,19 @@ function countStudents(fileName) {
           if (lines[i]) {
             leng += 1;
             const field = lines[i].toString().split(',');
+            if (Object.prototype.hasOwnProperty.call(students, field[3])) {
+              students[field[3]].push(field[0]);
+            } else {
+              students[field[3]] = [field[0]];
+            }
+            if (Object.prototype.hasOwnProperty.call(fields, field[3])) {
+              fields[field[3]] += 1;
+            } else {
+              fields[field[3]] = 1;
+            }
           }
         }
+        resolve(output);
       }
     })
   })
