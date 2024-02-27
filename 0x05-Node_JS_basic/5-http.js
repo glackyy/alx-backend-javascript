@@ -63,3 +63,8 @@ const app = http.createServer((request, response) => {
     });
   }
 });
+
+app.listen(port, hostname, () => {
+});
+
+module.exports = app;
