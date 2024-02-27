@@ -36,7 +36,10 @@ function constStudents(fileName) {
             console.log(`Number of students in ${key}: ${val}. List: ${students[key].join(', ')}`);
           }
         }
+        resolve(data);
       }
-    })
-  }) 
+    });
+  });
 }
+
+module.exports = countStudents;
