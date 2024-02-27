@@ -1,5 +1,6 @@
 const express = require('express');
 const { readFile } = require('fs');
+const { response } = require('./6-http_express');
 
 const app = express();
 const port = 1245;
@@ -33,6 +34,20 @@ function countStudents(fileName) {
         }
         resolve(output);
       }
-    })
-  })
+    });
+  });
 }
+
+app.get('/', (request, response) => {
+  response.send('Hello Holberton School!');
+});
+app.get('/students', (request, response) => {
+  countStudents(process.argv[2].toString()).then((output) => {
+    response.send(['This is the list of our students', output].join('\n'));
+  }).catch(() => {
+    response.send('This is the list of our students\nCannot load the database');
+  });
+});
+
+app.listen(port, () => {
+});
