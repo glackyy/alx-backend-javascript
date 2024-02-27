@@ -30,7 +30,12 @@ function constStudents(fileName) {
           }
         }
         const l = leng - 1;
-        
+        console.log(`Number of students: ${l}`);
+        for (const [key, val] of Object.entries(fields)) {
+          if (key !== 'field') {
+            console.log(`Number of students in ${key}: ${val}. List: ${students[key].join(', ')}`);
+          }
+        }
       }
     })
   }) 
