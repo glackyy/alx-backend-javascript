@@ -1,7 +1,4 @@
-const { rejects } = require('assert');
-const { error } = require('console');
 const { readFile } = require('fs');
-const { resolve } = require('path');
 
 function constStudents(fileName) {
   const students = {};
