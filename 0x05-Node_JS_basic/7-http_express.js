@@ -1,6 +1,5 @@
 const express = require('express');
 const { readFile } = require('fs');
-const { response } = require('./6-http_express');
 
 const app = express();
 const port = 1245;
@@ -32,6 +31,14 @@ function countStudents(fileName) {
             }
           }
         }
+        const l = leng - 1;
+        output += `Number of students: ${l}\n`;
+        for (const [key, val] of Object.entries(fields)) {
+          if (key !== 'field') {
+            output += `Number of students in ${key}: ${val}. `;
+            output += `List: ${students[key].join(', ')}\n`;
+          }
+        }
         resolve(output);
       }
     });
@@ -51,3 +58,5 @@ app.get('/students', (request, response) => {
 
 app.listen(port, () => {
 });
+
+module.exports = app;
