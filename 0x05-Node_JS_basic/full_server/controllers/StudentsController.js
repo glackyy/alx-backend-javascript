@@ -3,7 +3,7 @@ const readDatabase = require('../utils');
 class StudentsController {
   static getAllStudents(request, response) {
     readDatabase(process.argv[2].toString()).then((students) => {
-      const ouptu = [];
+      const output = [];
       output.push('This is the list of our students');
       const keys = Object.keys(students);
       keys.sort();
