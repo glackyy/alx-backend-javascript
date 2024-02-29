@@ -26,6 +26,6 @@ describe("Cart page", function() {
     request.get("http://localhost:7865/cart/12", function(error, res, body) {
       expect(res.statusCode).to.equal(200);
       done();
-    })
-  })
+    });
+  });
 })
