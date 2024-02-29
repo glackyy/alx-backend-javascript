@@ -73,3 +73,15 @@ describe("Available_payments page", function() {
     });
   });
 });
+
+describe("Login", function() {
+  it(`Checking correct status code for request that's sent properly`, function(done) {
+    const option = {
+        url: "http://localhost:7865/login",
+        json: true,
+        body: {
+            userName: 'JOE'
+        }
+    }
+  })
+})
