@@ -114,7 +114,7 @@ describe("Login", function() {
       url: "http://localhost:7865/login",
       json: true,
       body: {
-        userName: 'JOE'
+        usme: 'JOE'
       }
     };
     request.post(option, function(err, res, body) {
