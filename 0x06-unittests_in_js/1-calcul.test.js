@@ -27,4 +27,4 @@ describe("calculateNumber()", function() {
     const res = calculateNumber("DIVIDE", 1.4, 4.6);
     assert.strictEqual(res, 0.2);
   });
-})
+});
