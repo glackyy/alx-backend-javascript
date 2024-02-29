@@ -24,8 +24,18 @@ app.get('/available_payments', (request, response) => {
   response.send(payMethods);
 });
 
+app.post('/login', (request, response) => {
+  const username = request.body.username;
+  if (username) {
+    response.send(`Welcome ${username}`);
+  } else {
+    response.status(404).send();
+  }
+});
+
 app.listen(port, () => {
     console.log(`API available on localhost port ${port}`);
 });
 
 module.exports = app;
+
