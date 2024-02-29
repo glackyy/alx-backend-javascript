@@ -8,11 +8,11 @@ describe("calculateNumber()", function() {
     assert.strictEqual(res, 3);
   });
   it(`checking if numbers round`, function() {
-    const res = calculateNumber("SUBSTRACT", 1.4, 2.2);
-    assert.strictEqual(res, -1);
+    const res = calculateNumber("SUBTRACT", 1.4, 2.2);
+    assert.strictEqual(res, -1)
   });
   it(`checking if numbers round`, function() {
-    const res = calculateNumber("SUBSTRACT", 4.9, 2.7);
+    const res = calculateNumber("SUBTRACT", 4.9, 2.7);
     assert.strictEqual(res, 2);
   });
   it(`checking if numbers round`, function() {

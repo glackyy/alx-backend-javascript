@@ -6,7 +6,7 @@ function calculateNumber(type, a, b) {
     case 'SUM':
         c = an + bn;
         break;
-    case 'SUBSTRACT':
+    case 'SUBTRACT':
         c = an - bn;
         break;
     case 'DIVIDE':
