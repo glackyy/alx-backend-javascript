@@ -12,14 +12,16 @@ describe("Index page", function() {
       expect(res.statusCode).to.equal(200);
       done();
     });
+  });
   it(`checking correct content`, function(done) {
     request(options, function(error, res, body) {
       expect(body).to.contain("Welcome to the payment system");
       done();
     });
-  it(`checking correct status code`, function(done) {
+  });
+  it(`checking correct content length`, function(done) {
     request(options, function(error, res, body) {
-      expect(res.statusCode).to.equal(200);
+      expect(res.headers['content-length']).to.equal('29');
       done();
     });
   });
