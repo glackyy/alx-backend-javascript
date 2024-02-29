@@ -1,7 +1,6 @@
 const request = require("request");
 const { describe, it } = require("mocha");
 const expect = require("chai").expect;
-const app = require("./api");
 
 describe("Index page", function () {
   const options = {
@@ -43,6 +42,18 @@ describe("Cart page", function () {
     request.get("http://localhost:7865/cart/kim", function (err, res, body) {
       expect(res.statusCode).to.equal(404);
       done();
+    });
+  });
+});
+
+describe("Available_payments page", function() {
+  it(`Checking correct status for correct url`, function() {
+    request.get("http://localhost:7865/available_payments", (err, res, body) => {
+      if (err) {
+        expect(res.statusCode).to.not.equal(200);
+      } else {
+        expect(res.statusCode).to.equal(200);
+      }
     });
   });
 });
