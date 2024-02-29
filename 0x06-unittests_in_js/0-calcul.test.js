@@ -23,4 +23,8 @@ describe("calculateNumber()", function() {
     const res = calculateNumber(-1.6, -1.7);
     assert.strictEqual(res, -4);
   });
-})
+  it(`checking if numbers round`, function() {
+    const res = calculateNumber(-1.4, -1.3);
+    assert.strictEqual(res, -2);
+  });
+});
