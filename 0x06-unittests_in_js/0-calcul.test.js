@@ -15,4 +15,12 @@ describe("calculateNumber()", function() {
     const res = calculateNumber(1.6, 2.7);
     assert.strictEqual(res, 5);
   });
+  it(`checking if numbers round`, function() {
+    const res = calculateNumber(0, 0);
+    assert.strictEqual(res, 0);
+  });
+  it(`checking if numbers round`, function() {
+    const res = calculateNumber(-1.6, -1.7);
+    assert.strictEqual(res, -4);
+  });
 })
