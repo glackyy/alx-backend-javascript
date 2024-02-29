@@ -23,4 +23,8 @@ describe("calculateNumber()", function() {
     const res = calculateNumber("DIVIDE", 1.7, 0);
     assert.strictEqual(res, "Error");
   });
+  it(`checking if numbers round`, function() {
+    const res = calculateNumber("DIVIDE", 1.4, 4.6);
+    assert.strictEqual(res, 0.2);
+  });
 })
