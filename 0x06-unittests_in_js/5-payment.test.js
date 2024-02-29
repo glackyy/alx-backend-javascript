@@ -7,4 +7,7 @@ describe("sendPaymentRequestToApi", function() {
   beforeEach("Setting up spy to use for each test", function() {
     sinon.spy(console, "log");
   });
+  afterEach("restoring spy after each test", function() {
+    console.log.restore();
+  });
 });
