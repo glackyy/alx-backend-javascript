@@ -15,4 +15,8 @@ describe("calculateNumber()", function() {
     const res = calculateNumber("SUBSTRACT", 4.9, 2.7);
     assert.strictEqual(res, 2);
   });
+  it(`checking if numbers round`, function() {
+    const res = calculateNumber("DIVIDE", 4, 2);
+    assert.strictEqual(res, 2);
+  });
 })
