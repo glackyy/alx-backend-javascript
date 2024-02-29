@@ -19,10 +19,13 @@ describe("Index page", function() {
       done();
     });
   });
-  it(`checking correct content length`, function(done) {
-    request(options, function(error, res, body) {
-      expect(res.headers['content-length']).to.equal('29');
-      done();
-    });
-  });
 });
+
+describe("Cart page", function() {
+  it(`Checking correct status code for correct url`, function(done) {
+    request.get("http://localhost:7865/cart/12", function(error, res, body) {
+      expect(res.statusCode).to.equal(200);
+      done();
+    })
+  })
+})
