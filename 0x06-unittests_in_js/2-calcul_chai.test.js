@@ -1,6 +1,6 @@
-const assert = require("assert");
+const expect = require("chai").expect;
 const { it, describe } = require("mocha");
-const calculateNumber = require("./1-calcul");
+const calculateNumber = require("./2-calcul_chai");
 
 describe("calculateNumber()", function() {
   it(`checking if numbers round`, function() {
