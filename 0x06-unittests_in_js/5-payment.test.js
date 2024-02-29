@@ -10,4 +10,8 @@ describe("sendPaymentRequestToApi", function() {
   afterEach("restoring spy after each test", function() {
     console.log.restore();
   });
+  it(`checking if console.log is called with the right arg`, function() {
+    sendPaymentRequestToApi(100, 20);
+    expect(console.log.withArgs("The total is: 120").calledOnce).to.be.true;
+  });
 });
