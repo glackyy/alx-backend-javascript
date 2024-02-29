@@ -11,20 +11,12 @@ describe("calculateNumber()", function() {
       expect(calculateNumber("SUM", 1.6, 2.6)).to.equal(5);
     });
   });  
-  describe("SUM", function() {
+  describe("SUBTRACT", function() {
     it(`checking if numbers round`, function() {
-      expect(calculateNumber("SUM", 1, 2)).to.equal(3);
+      expect(calculateNumber("SUBTRACT", 1.4, 2.3)).to.equal(-1);
     });
     it(`checking if numbers round`, function() {
-      expect(calculateNumber("SUM", 1.6, 2.6)).to.equal(5);
-    });
-  });  
-  describe("SUM", function() {
-    it(`checking if numbers round`, function() {
-      expect(calculateNumber("SUM", 1, 2)).to.equal(3);
-    });
-    it(`checking if numbers round`, function() {
-      expect(calculateNumber("SUM", 1.6, 2.6)).to.equal(5);
+      expect(calculateNumber("SUBTRACT", 4.9, 2.7)).to.equal(2);
     });
   });  
   describe("SUM", function() {
@@ -34,5 +26,5 @@ describe("calculateNumber()", function() {
     it(`checking if numbers round`, function() {
       expect(calculateNumber("SUM", 1.6, 2.6)).to.equal(5);
     });
-  });  
+  });   
 });
