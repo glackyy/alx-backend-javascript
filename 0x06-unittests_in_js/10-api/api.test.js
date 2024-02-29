@@ -56,4 +56,20 @@ describe("Available_payments page", function() {
       }
     });
   });
+  it(`Checking correct body content for correct url`, function() {
+    const option = {json: true};
+    const payLoad = {
+      payment_methods: {
+        credit_cards: true,
+        paypal: false
+      }
+    }
+    request.get("http://localhost:7865/available_payments", option, (err, res, body) => {
+      if (err) {
+        expect(res.statusCode).to.not.equal(200);
+      } else {
+        expect(body).to.deep.equal(payLoad);
+      }
+    });
+  });
 });
