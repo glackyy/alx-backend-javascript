@@ -28,4 +28,10 @@ describe("Cart page", function() {
       done();
     });
   });
-})
+  it(`Checking correct content for correct url`, function(done) {
+    request.get("http://localhost:7865/cart/12", function(error, res, body) {
+      expect(body).to.contain("Payment method for cart 12");
+      done();
+    });
+  });
+});
