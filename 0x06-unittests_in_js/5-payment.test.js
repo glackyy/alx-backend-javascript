@@ -14,4 +14,8 @@ describe("sendPaymentRequestToApi", function() {
     sendPaymentRequestToApi(100, 20);
     expect(console.log.withArgs("The total is: 120").calledOnce).to.be.true;
   });
+  it(`checking if console.log is called with the right arg`, function() {
+    sendPaymentRequestToApi(10, 10);
+    expect(console.log.withArgs("The total is: 20").calledOnce).to.be.true;
+  });
 });
