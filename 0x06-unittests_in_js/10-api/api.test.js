@@ -86,6 +86,36 @@ describe("Login", function() {
     request.post(option, function(err, res, body) {
       expect(res.statusCode).to.equal(200);
       done();
-    })
+    });
   });
-})
+  it(`Checking correct content for request that's sent properly`, function(done) {
+    const option = {
+      url: "http://localhost:7865/login",
+      json: true,
+      body: {
+        userName: 'JOE'
+      }
+    };
+    request.post(option, function(err, res, body) {
+      if (err) {
+        expect(res.statusCode).to.not.equal(200);
+      } else {
+        expect(body).to.contain('Welcome JOE');
+      }
+      done();
+    });
+  });
+  it(`Checking correct status code for request that's not sent properly`, function(done) {
+    const option = {
+      url: "http://localhost:7865/login",
+      json: true,
+      body: {
+        userName: 'JOE'
+      }
+    };
+    request.post(option, function(err, res, body) {
+      expect(res.statusCode).to.equal(404);
+      done();
+    });
+  });
+});
