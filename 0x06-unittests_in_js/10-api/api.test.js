@@ -82,6 +82,10 @@ describe("Login", function() {
         body: {
             userName: 'JOE'
         }
-    }
-  })
+    };
+    request.post(option, function(err, res, body) {
+      expect(res.statusCode).to.equal(200);
+      done();
+    })
+  });
 })
